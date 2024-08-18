@@ -16,12 +16,17 @@ describe('<NewPollForm />', () => {
         'New poll',
       );
 
-      userEvent.click(screen.getByTestId('sendButton'));
+      await userEvent.click(screen.getByTestId('sendButton'));
     }
 
     it('clears the text field', async () => {
       await sendPoll();
       expect(screen.getByTestId('pollText').value).toEqual('');
+    });
+
+    it('calls the send handler', async () => {
+      await sendPoll();
+      expect(sendHandler).toHaveBeenCalledWith('New poll');
     });
   });
 });
