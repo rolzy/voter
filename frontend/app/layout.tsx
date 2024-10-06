@@ -5,6 +5,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers";
+import { SiteHeader } from "@/components/site-header";
 
 const metadata: Metadata = {
   title: {
@@ -88,6 +89,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           >
             <div vaul-drawer-wrapper="">
               <div className="relative flex min-h-screen flex-col bg-background">
+                <SiteHeader />
                 {children}
               </div>
             </div>

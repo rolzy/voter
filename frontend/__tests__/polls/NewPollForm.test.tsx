@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import NewPollForm from "../../app/polls/NewPollForm";
+import NewPollForm from "@/app/polls/forms/NewPollForm";
 
 describe("<PollForm />", () => {
   describe("clicking the send button", () => {
